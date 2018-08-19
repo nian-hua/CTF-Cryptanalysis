@@ -1,3 +1,3 @@
 # CTF-Cryptanalysis
 
-主要是ctf中密码分析的题目
+记录自己做过的CTF密码分析题
