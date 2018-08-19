@@ -22,7 +22,8 @@ The num is :1356475333
 The num is :1356724881
 The num is :1356744931
 ````
-分别使用以上密钥对加密后的文件进行解密(getfile.py)：
+分别使用以上密钥对加密后的文件进行解密(getfile.py)：</br>
+当然只有一个是正确的~
 ````
 └──╼ #python3 newxor.py 
 This key:1354709136
