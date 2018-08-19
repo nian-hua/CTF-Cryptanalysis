@@ -1,3 +1,9 @@
+###
+###    Date:2018-08-19
+###   Time:08:17 GMT
+###  Author:nianhua
+###
+
 这个题使用cryptography仓库下的virginia文件夹里的脚本即可解密：</br>
 1. 首先处理密文，只保留英文符号，其余符号以及换行空格等均去除
 2. 使用kasiski.py以及friedman.py测试确定密钥长度为9
