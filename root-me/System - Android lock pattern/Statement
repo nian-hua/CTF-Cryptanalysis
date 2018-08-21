@@ -1,0 +1,5 @@
+Task on RootMe: https://www.root-me.org/en/Challenges/Cryptanalysis/System-Android-lock-pattern
+
+
+# cat find android/ -name gesture.key | xxd -ps
+2c3422d33fb9dd9cde87657408e48f4e635713cb
