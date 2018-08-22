@@ -31,11 +31,9 @@ def bill(string,password):
 
     for i in range(len(flag)//4):
 
-        flag[4*i+1:4*i+2],flag[4*i+3:4*i+4] = flag[4*i+3:4*i+4],flag[4*i+1:4*i]
-
+        flag[4*i+1],flag[4*i+3] = flag[4*i+3],flag[4*i+1]
 
     print("flag{%s}"%(''.join(flag)))
-
 
 string = input("Please input string:")
 
