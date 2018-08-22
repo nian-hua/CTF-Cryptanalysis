@@ -23,13 +23,19 @@ def bill(string,password):
 
     temp = string.split(' ')
 
-    flag = ''
+    flag = []
 
     for i in range(len(password)//2):
 
         flag += temp[int(password[i*2:i*2+2],16)][:1]
 
-    print("flag{%s}"%flag)
+    for i in range(len(flag)//4):
+
+        flag[4*i+1:4*i+2],flag[4*i+3:4*i+4] = flag[4*i+3:4*i+4],flag[4*i+1:4*i]
+
+
+    print("flag{%s}"%(''.join(flag)))
+
 
 string = input("Please input string:")
 
