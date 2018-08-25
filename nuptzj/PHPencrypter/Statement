@@ -1,0 +1,15 @@
+密文：iEJqak3pjIaZ0NzLiITLwWTqzqGAtW2oyOTq1A3pzqas
+
+
+PHP加密源码：
+
+function encode($str){
+       $_o = strrev($str)
+       for($_0=0;$_0<strlen($_o);$_0++){
+               $_c = substr($_o,$_0,1);
+               $__ = ord($_c)+1;
+               $_c = chr($__);
+               $_=$_.$_c;
+       }
+       return str_rot13(strrev(base64_encode($_)));
+}
