@@ -1,0 +1,10 @@
+###
+###    Date:2018-08-19
+###   Time:08:17 GMT
+###  Author:nianhua
+###
+
+R1pDVE1NWlhHUTNETU4yQ0dZWkRNTUpYR00zREtNWldHTTJES1JSV0dJM0RDTlpUR1kyVEdNWlRHSTJVTU5SUkdaQ1RNTkJWSVkzREVOUlJHNFpUTU5KVEdFWlRNTjJF
+
+</br>
+依次使用base64 ，base32 ，base16解密
