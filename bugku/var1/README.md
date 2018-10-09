@@ -18,10 +18,7 @@ if(isset($_GET['args'])){                      //条件判断 get方法传递的
 }
 ?>
 ````
-
-
 $$args 可以理解为$($args)    </br>
-
 ````
 eg:
 
@@ -29,16 +26,37 @@ eg:
 
  $args="a";
 
- echo $$args;   输出结果为： hello world!  
-````
-$$args 可以理解为$($args)   
-````
-eg:
-
- $a="hello world!";
-
- $args="a";
-
- echo $$args;   输出结果为： hello world!  
+ echo $$args;   输出结果为： hello world! 
  
- ````
+````
+
+eval()函数存在命令执行漏洞  我们的目标是查看flag1.php中的flag 首先想到的是本地包含漏洞查看源码  或者上传一句话木马等思路 </br>
+
+而本题条件判断加了正则表达式判断，过滤了括号和引号等字符。无法构造！  但输出时是   $$args  我们想到构造 php中超全局变量 $GLOBALS </br>
+
+最后补充一点  很多人都认为global和$GLOBALS[]只是写法上面的差别，其实不然。  前者为变量实体 后者为别名引用eg：
+````
+<?php
+$var1 = 1;
+function test(){
+unset($GLOBALS['var1']);
+}
+test();
+echo $var1;
+?>
+````
+因为$var1被删除了，所以什么东西都没有打印。
+````
+<?php
+$var1 = 1;
+function test(){
+global $var1;
+unset($var1);
+}
+test();
+echo $var1;
+?>
+````
+意外的打印了1。证明删除的只是别名，$GLOBALS['var']的引用，起本身的值没有受到任何的改变。验证了我们之前所说的东西 
+
+
